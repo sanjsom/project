@@ -59,9 +59,8 @@ var controller = {
         }
         else {
             var password = user.password
-            var name = user.name            
-            mailBody = "Hi " + name + "," + "<br> Your password is : <b>" + password + "</b"
-            emailController.sendwithoutcc(email, "srivsashmi@gmail.com", "Password Recovery", mailBody)
+            mailBody = <br> Your password is : <b>" + password + "</b"
+            emailController.sendwithoutcc(email, "sanjay21298@gmail.com", "Password Recovery", mailBody)
             res.render("member-login", { title: "Member Login Page" })
         }
 
