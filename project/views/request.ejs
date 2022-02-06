@@ -1,0 +1,24 @@
+<!Doctype html>
+
+<html>
+
+<head>  
+  <title>Make Request</title>
+</head>
+
+<body>
+  <form action="/admin/submitRequest" method="POST">
+    <div class="login">
+      <h1>Request for more details</h1>
+      <input type="hidden" name="aid" value="<%=adData._id%>" required="required" />
+      <input type="hidden" name="title" value="<%=adData.title%>" required="required" />
+      <input type="hidden" name="mid" value="<%=memberData._id%>" required="required" />
+      <input type="hidden" name="name" value="<%=memberData.name%>" required="required" />      
+      <input type="text" name="email" value="<%=memberData.email%>" readonly /> 
+      <input type="text" name="message" placeholder="Provide your nessage request" required="required" />      
+      <button type="submit" class="btn btn-primary btn-block btn-large">SEND</button>
+  </form>
+  </div>
+  </form>
+</body>
+</html>
