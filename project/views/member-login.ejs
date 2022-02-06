@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>
+        <%=title%>
+    </title>
+    
+</head>
+
+<body>
+    <form action="/member/loginverify" method="post">
+        <div class="login">
+            <h1>Member Login</h1>   
+            <div>
+                <label> Email Address </label><br>
+                <input type="email" name="email" required />
+            </div>
+            <div>
+                <label> Password </label><br>
+                <input type="password" name="password" required />
+            </div>
+            <div>
+                <button class="btnRegister" type="submit"> Login Now </button>
+            </div>
+            <br>
+            <div>
+                <a href="/member/forgot"> Forgot Password? </a>
+            </div>
+           
+              <a style="margin-left: 64px;" href="/member/register"> Register new member </a>              
+            </div>            
+        </div>
+    </form>    
+</body>
+</html>
