@@ -1,0 +1,19 @@
+<!Doctype html>
+
+<html>
+
+<head>  
+  <title>Re-upload Image</title>
+</head>
+
+<body>
+  <form action="/member/reuploadImg" method="POST" enctype="multipart/form-data">
+    <div class="login">
+      <h1>Re-upload Image</h1>
+      <input type="hidden" name="id" value="<%=data._id%>" required="required" />
+      <input type="file" name="filetoupload" placeholder="Upload File" required="required" /> 
+      <button class="btnRegister" type="submit">Update Ad</button>  
+  </div>
+  </form>
+</body>
+</html>

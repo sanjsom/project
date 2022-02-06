@@ -1,0 +1,130 @@
+<!Doctype html>
+
+<html>
+
+<head>
+    <title>Details</title>
+</head>
+
+<body>
+    <h1>Full Details</h1>
+    <button class="btnAction" id="home" onclick="window.location.href = '/guest/viewallads';">
+        Back
+    </button>
+
+
+    <div class="card">
+        <p style="font-weight: 500;">This Ad is posted by - </p>
+        <p><strong>NAME: </strong>
+            <%=memberData.name%>
+        </p>
+        <p><strong>EMAIL: </strong>
+            <%=memberData.email%>
+        </p>
+        <p><strong>DOB: </strong>
+            <%=memberData.dob%>
+        </p>
+        <p><strong>MOBILE: </strong>
+            <%=memberData.mobile%>
+        </p>
+        <p><strong>AGE: </strong>
+            <%=memberData.age%>
+        </p>
+      
+        <p><button class="btnContact" onclick="window.location.href = '/guest/contactMember/<%=memberData._id%>/';">CONTACT</button>
+        </p>
+    </div>
+
+
+    <table style="background-color: aqua;">
+        <thead>
+            <tr>
+                <th>Image</th>
+                <th>Title </th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Time Created</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr>
+                <% var imgUrl = "/media/"+adData._id+"."+adData.image%>
+                    <td>
+                        <img src=<%=imgUrl%>>
+                    </td>
+                <td>
+                    <%=adData.title%>
+                </td>
+                <td>
+                    <%=adData.description%>
+                </td>
+                <td>
+                    <%=adData.price%>
+                </td>
+                <td>
+                    <% var dObj=new Date(adData.createdDateTime) 
+                    var date=dObj.getDate()+"/"+(dObj.getMonth()+1)+"/"+dObj.getFullYear()+" "+ dObj.getHours()+":"+dObj.getMinutes()+":"+dObj.getSeconds() %>
+                        <%=date%>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+<style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    th, td {
+      text-align: left;
+      padding: 8px;
+    }
+    
+    tr:nth-child(even){background-color: #f2f2f2}
+    
+    th {
+      background-color: #04AA6D;
+      color: white;
+    }
+    
+              
+              * { -webkit-box-sizing:border-box; -moz-box-sizing:border-box; -ms-box-sizing:border-box; -o-box-sizing:border-box; box-sizing:border-box; }
+              
+              html { width: 100%; height:100%; overflow:hidden; }
+              
+              body { 
+                width: 100%;
+                height:100%;
+                font-family: 'Open Sans', sans-serif;
+            
+              }
+              .form{
+                  font-size: larger;
+                  width: 250px;
+                  height: 300px;
+                  background: linear-gradient(to bottom, #33cccc 0%, #ff9933 100%);
+                  border: 1px solid;
+                padding: 10px;
+                box-shadow: 5px 10px #363305;
+              }
+              div{
+                  padding: 10px;
+              }
+              a:link, a:visited {
+                background-color: #36f436;
+                color: white;
+                padding: 14px 25px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+              }
+              
+              a:hover, a:active {
+                background-color: rgb(102, 228, 140);
+              }
+                 
+    </style>
+</html>

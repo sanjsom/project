@@ -60,7 +60,3 @@ member.use(express.static('public'))
 app.listen(port, function(err){
     console.log("server started at ", port)
 })
-
-app.get("/style.css", function (req, res) {
-    res.sendFile(__dirname + "/views/style.css")
-})
