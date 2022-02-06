@@ -31,8 +31,8 @@ var controller = {
             message: req.body.message,
             adminemail: req.body.adminemail
         }
-        mailBody = "Hi " + memberData.name + ", " + "<br><p> A guest user has sent you a message !</p><p>Message:<b>" + memberData.message + "</b</p>"
-        emailController.send(memberData.email, memberData.adminemail, "srivsashmi@gmail.com", "Contact Mail", mailBody)
+        mailBody = "<p> A guest user has sent you a message !</p><p>Message:<b>" + memberData.message + "</b</p>"
+        emailController.send(memberData.email, memberData.adminemail, "sanjay21298@gmail.com", "Contact Mail", mailBody)
         res.redirect("/guest/viewallads")
     },
 
